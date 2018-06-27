@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>结果</title>
+</head>
+<body>
+  <div>
+
+
+   </div>
+  <div th:if="${result &gt; 0}">
+      注册成功
+  </div>
+  <div th:if="${result &lt; 0}">
+      <p th:text="${text}"></p>
+      注册失败
+  </div>
+</body>
+</html>

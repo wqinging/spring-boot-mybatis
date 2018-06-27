@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+  <form th:if="${list.size()} != 0">
+      <table>
+          <tr>
+              <th>客户ID</th>
+              <th>客户名称</th>
+          </tr>
+          <tr  th:each="customerlist:${list}">
+              <td th:text="${customerlist.cusId}"></td>
+              <td th:text="${customerlist.cusName}"></td>
+          </tr>
+      </table>
+  </form>
+  <div th:if="${list.size()} == 0">
+      没有数据
+  </div>
+</body>
+</html>

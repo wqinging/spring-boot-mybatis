@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.themeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+</head>
+<body>
+   <form th:action="@{/register}"  th:object="${customer}" method="post">
+       用户名:<input type="text" name="cusName" th:field="*{cusName}"/>
+       <input type="submit" value="注册" />
+       <p th:if="${#fields.hasErrors('cusName')}" th:errors="*{cusName}">cusName Error</p>
+   </form>
+</body>
+</html>
